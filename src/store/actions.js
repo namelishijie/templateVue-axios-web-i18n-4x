@@ -1,11 +1,11 @@
 export default {
-  toKen(context, option) {
+  TOKEN(context, option) {
     context.commit("toKen", option)
   },
-  lang(context, option) {
+  LANG(context, option) {
     context.commit("lang", option)
   },
-  isloading(context, option) {
+  ISLOADING(context, option) {
     context.commit("isloading", option)
   }
 }

@@ -1,11 +1,15 @@
-export default {
-  toKen(state, option) {
-    state.toKen = option
-  },
-  lang(state, option) {
-    state.lang = option
-  },
-  isloading(state, option) {
-    state.isloading = option
+const type = [
+  "token",
+  "lang",
+  "isloading",
+]
+
+const obj = {}
+
+type.forEach(item => {
+  obj[item] = (state, option) => {
+    state[item] = option
   }
-}
+})
+
+export default obj
