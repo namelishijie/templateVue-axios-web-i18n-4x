@@ -6,11 +6,10 @@ import i18n from './i18n'
 import service from './service'
 import tools from './libs/tools'
 import 'normalize.css/normalize.css'
-import VeeValidate, { Validator } from 'vee-validate'
-import Extend from './libs/vaildate'
+import './libs/vaildate'
 
 const GETI18N = str => i18n.messages[store.getters.lang][str.match(/(\S*)\./)[1]][str.match(/\.(\S*)/)[1]]
-Vue.use(service).use(tools).use(VeeValidate).use(Extend, Validator)
+Vue.use(service).use(tools)
 
 Vue.config.productionTip = false
 
